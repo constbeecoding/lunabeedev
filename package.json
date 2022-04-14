@@ -1,0 +1,23 @@
+{
+  "name": "lunabeedev",
+  "version": "0.0.1",
+  "description": "A repository housing my portfolio website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/constbeecoding/lunabeedev.git"
+  },
+  "keywords": [],
+  "author": "lunabee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/constbeecoding/lunabeedev/issues"
+  },
+  "homepage": "https://github.com/constbeecoding/lunabeedev#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
