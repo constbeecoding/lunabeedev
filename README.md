@@ -10,5 +10,6 @@ Deployed with Netlify!
 
 * *11ty* - https://www.11ty.dev/docs/getting-started/
 * *Netlify* - https://app.netlify.com/
+* *Eleventy Netlify Boilerplate* - https://github.com/danurbanowicz/eleventy-netlify-boilerplate
 * *Conventional Commit Guidelines* (as much as possible) - https://www.conventionalcommits.org/en/v1.0.0/
 
