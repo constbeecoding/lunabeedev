@@ -1,7 +1,7 @@
 :root {
-	--primary: blue;
+	--primary: #4a4a83;
 	--secondary: white;
-	--background: #FFF0EB;
+	--background: #e6e6fa;
 }
 
 *, *:before, *:after {
@@ -16,6 +16,7 @@ body {
 }
 
 body {
+	color: #040322;
 	display: grid;
 	height: 100vh;
 	grid-template-rows: auto 1fr auto;
@@ -89,7 +90,14 @@ header > em {
 }
 
 /* Header Nav */
+header {
+	display: flex;
+	flex-direction: column;
+}
+
 header nav ul {
+	display: flex;
+	justify-content: center;
 	padding: 0;
 	list-style: none;
 }
