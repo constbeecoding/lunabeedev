@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: constbeecoding/lunabeedev
   branch: master # Branch to update (optional; defaults to master)
 
 # Uncomment below to enable drafts
