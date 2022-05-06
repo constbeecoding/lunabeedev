@@ -31,26 +31,6 @@
 # For context-specific rules, use _headers or _redirects files, which are
 # applied on a PER-DEPLOY basis.
 
-#[[plugins]]
-#  package = "@netlify/plugin-lighthouse"
-
-  # optional, fails build when a category is below a threshold
-  # [plugins.inputs.thresholds]
-  #   performance = 0.9
-  #   accessibility = 0.9
-  #   best-practices = 0.9
-  #   seo = 0.9
-  #   pwa = 0.9
-
-  # optional, deploy the lighthouse report to a path under your site
-  # [plugins.inputs]
-    # output_path = "reports/lighthouse.html"
-
-
-  # package = "@algolia/netlify-plugin-crawler"
-    # [plugins.inputs]
-    # branches = ['main', 'develop', 'feat/add-algolia']
-    # disabled = true
-    # pathPrefix = "/blog"
-    # customDomain = "example.com"
-    # renderJavaScript = true
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  package = "@algolia/netlify-plugin-crawler"
