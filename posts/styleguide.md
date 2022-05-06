@@ -1,11 +1,11 @@
 ---
-title: This is the first test post
-metaDescription: This is a test of the meta description
-date: 2022-04-27T00:00:00.000Z
+title: This is a post to test the styleguide.
+metaDescription: A post to test the styleguide.
+date: 2022-05-34T00:10:00.000Z
 author: Luna
-summary: I can see the Netlify CMS backend, but why API no work...
+summary: Here we can see some testing of the styleguide.
 tags:
-  - blog
+  - styleguide
 ---
 ![](/static/img/alexander-andrews-enoewzko7zc-unsplash.jpg)
 
