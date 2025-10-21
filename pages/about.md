@@ -1,25 +1,16 @@
 ---
 title: About Me
-metaDescription: This is a sample meta description. If one is not present in your page/post's front matter, the default metadata.desciption will be used instead.
-date: 2022-05-05T00:00:00.000Z
+metaDescription: This is an about page for Luna Bee's Web Development Portfolio.
+date: 2025-010-21T00:00:00.000Z
 permalink: /about/index.html
 eleventyNavigation:
   key: About
   order: 1
 ---
-I'll talk about myself a bit here soon...
-## This Page...
 
-I Promise...
+## I'm Luna
 
-### Is a work...
+A Front-End Developer who loves travel with 4+ years of experience. I enjoy learning and leveraging skills in Accessibility (A11Y) WordPress, PHP, JavaScript, Webpack, Vite, and React to build responsive and accessible web applications. I've collaborated with SCRUM/AGILE teams remotely, I perform pull/merge request reviews, resolve site issues, and enhance code quality while staying up-to-date on WCAG standards to improve site accessibility.
 
-I'll update this space...
+Dedicated to fostering digital inclusivity, I like to work closely with UI/UX designers and utilize tools like Figma, Matomo Analytics, and Atlassian products to ensure seamless user experiences. My professional mission is to create web solutions that prioritize both functionality and accessibility, enabling users to engage with intuitive designs and optimized performance across platforms.
 
-#### In
-
-as soon as I can.
-
-##### Progress
-
-The world and life is just a lot right now ☠️
