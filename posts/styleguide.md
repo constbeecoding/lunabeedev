@@ -1,15 +1,12 @@
 ---
 title: This is a post to test the styleguide.
 metaDescription: A post to test the styleguide.
-date: 2022-05-34T00:10:00.000Z
+date: 2025-10-23T00:10:00.000Z
 author: Luna
 summary: Here we can see some testing of the styleguide.
 tags:
   - styleguide
 ---
-![](/static/img/alexander-andrews-enoewzko7zc-unsplash.jpg)
-
-
 
 This is normal text. **This is bold text.** *This is italicized text.*
 
