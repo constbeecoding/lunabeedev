@@ -58,6 +58,11 @@ export default function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  // Date for Current Year
+  eleventyConfig.addFilter("currentYear", () => {
+    return new Date().getFullYear();
+  });
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
