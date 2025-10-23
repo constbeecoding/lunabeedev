@@ -5,6 +5,7 @@
 	{% include "components/head.njk" %}
 
 	<body>
+		{% include "components/skipnav.njk" %}
 
 		<header>
 			<em>
@@ -13,7 +14,7 @@
 			{% include "components/nav.njk" %}
 		</header>
 
-		<main>
+		<main id="main">
 			{{ content | safe }}
 		</main>
 
@@ -21,7 +22,11 @@
 		{% include "components/footer.njk" %}
         
 		{% include "components/returntotop.njk" %}
-		
+
+		<!-- Output Font Awesome spritesheet -->
+		{% getBundle "fontawesome" %}
+
+		<script src="/static/js/return-to-top.js"></script>
 	</body>
-	<script src="/static/js/back-to-top.js"></script>
+	
 </html>

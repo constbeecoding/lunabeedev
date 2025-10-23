@@ -2,10 +2,21 @@
 	--primary: #4a4a83;
 	--secondary: white;
 	--background: #e6e6fa;
+
+	/* Using Material UI Breakpoints */
+	--xs: 0px;
+	--sm: 600px;
+	--md: 900px;
+	--lg: 1200px;
+	--xl: 1536px;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
 }
 
 html,
@@ -94,6 +105,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 }
 
 header nav ul {
@@ -130,7 +142,7 @@ article {
 	margin-bottom: 1em;
 	padding-bottom: 1em;
 	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--secondary);
+	border-bottom: 1px solid var(--primary);
 }
 
 main > section > article > * {
@@ -165,6 +177,10 @@ a[rel="tag"]:hover {
 
 a[rel="tag"]:last-child {
 	margin-right: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--primary);
 }
 
 /* Contact Form */
@@ -204,3 +220,104 @@ button {
 		font-size: 1.1rem;
 	}
 }
+/* Skip Nav Styles*/
+
+.skipnav {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	background-color: #fff;
+	border: 2px solid var(--primary);			
+	color: #000;
+	letter-spacing: 0.15ch;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .skipnav:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+	outline: none;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	z-index: 10;
+  }
+
+  .skipnav:focus:hover {
+	background-color: var(--primary);
+	color: #fff;
+  }
+
+/* Footer Styling */
+
+.return-to-top-button {
+	align-items: center;
+    background-color: var(--primary);
+    border: none;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    width: 100%;
+    justify-content: center;
+	margin-bottom: 0;
+    position: sticky;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+  }
+
+  @media screen and (min-width: 600px) {
+	.return-to-top-button {
+		height: 6.25rem;
+        width: 6.25rem;
+        border-top-left-radius: 100%;
+        bottom: 0;
+        right: 0;
+        padding: 1rem 0 0 1rem;
+        position: fixed;
+	}
+  }
+  
+  .return-to-top-button:hover {
+	background-color: #000;
+	transform: scale(1.1);
+  }
+  
+  .footer-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  @media screen and (min-width: 600px) {
+	.footer-wrapper {
+		flex-direction: row;
+		align-items: center;
+	}
+  }
+
+  .footer-wrapper p {
+	margin: 0;
+  }
+
+  .eleventy-logo img{
+	padding: 0 .5rem;
+	width: 50px;
+  }
+
+  .dan-link {
+	padding: 0 .3rem;
+  }
