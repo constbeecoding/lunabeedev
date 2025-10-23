@@ -1,5 +1,6 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+	
 
 	{% include "components/head.njk" %}
 
@@ -13,13 +14,14 @@
 		</header>
 
 		<main>
-			{{ layoutContent | safe }}
+			{{ content | safe }}
 		</main>
 
-		<footer>
-            {% include "components/footer.njk" %}
-        </footer>
-
+		
+		{% include "components/footer.njk" %}
+        
+		{% include "components/returntotop.njk" %}
+		
 	</body>
-
+	<script src="/static/js/back-to-top.js"></script>
 </html>
