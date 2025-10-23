@@ -6,7 +6,8 @@ import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-
+import fontAwesomePlugin from "@11ty/font-awesome";
+import bundlePlugin from "@11ty/eleventy-plugin-bundle";
 
 export default function(eleventyConfig) {
 
@@ -16,14 +17,20 @@ export default function(eleventyConfig) {
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Add Bundle Plugin
+  eleventyConfig.addPlugin(bundlePlugin);
+
+  // Font Awesome Plugin
+  eleventyConfig.addPlugin(fontAwesomePlugin);
+
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
   // Blog posts collection
-eleventyConfig.addCollection("post", collection => {
-  return collection.getFilteredByGlob("posts/*.md").reverse();
-});
+  eleventyConfig.addCollection("post", collection => {
+    return collection.getFilteredByGlob("posts/*.md").reverse();
+  });
 
   // Add support for maintenance-free post authors
   eleventyConfig.addCollection("authors", collection => {
@@ -92,6 +99,7 @@ eleventyConfig.addCollection("post", collection => {
     breaks: true,
     linkify: true
   };
+
   let opts = {
     permalink: false
   };
