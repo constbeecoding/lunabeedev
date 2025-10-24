@@ -3,15 +3,32 @@ layout: layouts/base.njk
 section: post
 ---
 
-<article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
-    </small>
-  </p>
+<article class="blog-post">
+  <div class="post-header">
+    <h1>{{ title }}</h1>
+    <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
+  </div>
 
-  {{ content | safe }}
+  <div class="post-content-wrapper">
+    <aside class="table-of-contents">
+      <nav aria-label="Table of contents">
+        <p id="toc-heading" class="toc-title">On this page</p>
+        <ul>
+          {% set headings = content | extractHeadings %}
+          {% for heading in headings %}
+            <li class="toc-level-{{ heading.level }}">
+              <a href="#{{ heading.id }}">{{ heading.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ '/blog/' | url }}">← Blog index</a>
+      </nav>
+    </aside>
+
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+  </div>
 
   {% if tags %}
     <p>
@@ -25,7 +42,3 @@ section: post
   {% endif %}
 
 </article>
-
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>
