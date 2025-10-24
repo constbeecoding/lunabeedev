@@ -29,9 +29,15 @@ body {
 	place-items: center;
 }
 
-main {
+/* main {
 	max-width: 90em;
-}
+} */
+
+@media screen and (min-width: 900px) {
+	main {
+		max-width: 90em;
+	}
+  }
 
 p,
 pre,
