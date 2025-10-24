@@ -2,13 +2,7 @@
 	--primary: #4a4a83;
 	--secondary: white;
 	--background: #e6e6fa;
-
-	/* Using Material UI Breakpoints */
-	--xs: 0px;
-	--sm: 600px;
-	--md: 900px;
-	--lg: 1200px;
-	--xl: 1536px;
+	--black: #040322;
 }
 
 *, *:before, *:after {
@@ -36,7 +30,7 @@ body {
 }
 
 main {
-	max-width: 37.5em;
+	max-width: 90em;
 }
 
 p,
@@ -45,13 +39,18 @@ code {
 	line-height: 1.5;
 }
 
-a[href],
-a[href]:visited {
+a[href] {
 	color: var(--primary);
+	text-decoration: none;
 }
 
-a[href]:not(:hover) {
-	text-decoration: none;
+a[href]:hover,
+a[href]:visited {
+	color: var(--black)
+}
+
+a[href]:not(header a) {
+	text-decoration: underline;
 }
 
 img {
@@ -220,6 +219,7 @@ button {
 		font-size: 1.1rem;
 	}
 }
+
 /* Skip Nav Styles*/
 
 .skipnav {
@@ -241,7 +241,7 @@ button {
 	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
-  .skipnav:focus {
+.skipnav:focus {
 	clip: auto;
 	height: auto;
 	margin: 0;
@@ -253,71 +253,249 @@ button {
 	top: 1rem;
 	left: 1rem;
 	z-index: 10;
-  }
+}
 
-  .skipnav:focus:hover {
+.skipnav:focus:hover {
 	background-color: var(--primary);
 	color: #fff;
-  }
+}
+/* End of Skip Nav Styles*/
 
 /* Footer Styling */
 
 .return-to-top-button {
 	align-items: center;
-    background-color: var(--primary);
-    border: none;
-    bottom: 0;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 4rem;
-    width: 100%;
-    justify-content: center;
+	background-color: var(--primary);
+	border: none;
+	bottom: 0;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 4rem;
+	width: 100%;
+	justify-content: center;
 	margin-bottom: 0;
-    position: sticky;
-    transition: all .3s ease-in-out;
-    z-index: 100;
-  }
+	position: sticky;
+	transition: all .3s ease-in-out;
+	z-index: 100;
+}
 
-  @media screen and (min-width: 600px) {
-	.return-to-top-button {
-		height: 6.25rem;
-        width: 6.25rem;
-        border-top-left-radius: 100%;
-        bottom: 0;
-        right: 0;
-        padding: 1rem 0 0 1rem;
-        position: fixed;
-	}
-  }
-  
-  .return-to-top-button:hover {
+@media screen and (min-width: 600px) {
+.return-to-top-button {
+	height: 6.25rem;
+	width: 6.25rem;
+	border-top-left-radius: 100%;
+	bottom: 0;
+	right: 0;
+	padding: 1rem 0 0 1rem;
+	position: fixed;
+}
+}
+
+.return-to-top-button:hover {
 	background-color: #000;
 	transform: scale(1.1);
-  }
-  
-  .footer-wrapper {
+}
+
+.return-to-top-button svg {
+	width: 25px;
+	bottom: -10px;
+}
+
+.footer-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  }
+}
 
-  @media screen and (min-width: 600px) {
-	.footer-wrapper {
-		flex-direction: row;
-		align-items: center;
-	}
-  }
+@media screen and (min-width: 600px) {
+.footer-wrapper {
+	flex-direction: row;
+	align-items: center;
+}
+}
 
-  .footer-wrapper p {
-	margin: 0;
-  }
+	.footer-wrapper p {
+margin: 0;
+}
 
-  .eleventy-logo img{
+.eleventy-logo img{
 	padding: 0 .5rem;
 	width: 50px;
+}
+
+.dan-link {
+	padding: 0 .3rem;
+}
+
+/* End of Footer Styling */
+
+/* Blog Post Styling */
+
+/* Two-Column Layout */
+ main .blog-post {
+	max-width: 1200px;
+	width: 100%;
   }
 
-  .dan-link {
-	padding: 0 .3rem;
+  .post-header {
+	text-align: center;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid var(--primary);
   }
+  
+  .post-header h1 {
+	margin-bottom: 0.5rem;
+  }
+  
+  .post-header time {
+	color: #333; /* Changed from #666 for better contrast */
+	font-size: 0.9rem;
+  }
+  
+  .post-content-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	margin-top: 2rem;
+  }
+  
+  @media screen and (min-width: 900px) {
+	.post-content-wrapper {
+	  grid-template-columns: 250px 1fr;
+	  gap: 3rem;
+	}
+  }
+  
+  /* Table of Contents Sidebar */
+  .table-of-contents {
+	order: 2;
+  }
+  
+  @media screen and (min-width: 900px) {
+	.table-of-contents {
+	  order: 1;
+	  position: sticky;
+	  top: 2rem;
+	  align-self: start;
+	  max-height: calc(100vh - 4rem);
+	  overflow-y: auto;
+	}
+  }
+  
+  .toc-title {
+	font-size: 0.875rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	color: var(--primary);
+  }
+  
+  .table-of-contents ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .table-of-contents li {
+	margin-bottom: 0.5rem;
+  }
+  
+  .table-of-contents a {
+	text-decoration: none;
+	color: #040322;
+	font-size: 0.9rem;
+	transition: color 0.2s, background-color 0.2s;
+	display: block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+  }
+  
+  .table-of-contents a:hover {
+	color: var(--primary);
+	background-color: rgba(74, 74, 131, 0.1);
+  }
+  
+  /* Focus indicators - CRITICAL for WCAG AAA */
+  .table-of-contents a:focus {
+	outline: 3px solid var(--primary);
+  }
+  
+  /* Indent nested headings */
+  .toc-level-2 {
+	font-weight: 500;
+  }
+  
+  .toc-level-3 {
+	padding-left: 1rem;
+	font-size: 0.85rem;
+  }
+  
+  .toc-level-4 {
+	padding-left: 2rem;
+	font-size: 0.8rem;
+	color: #333; /* Changed from #666 for better contrast */
+  }
+  
+  /* Active link indicator (optional enhancement) */
+  .table-of-contents a.active {
+	color: var(--primary);
+	font-weight: 600;
+	background-color: rgba(74, 74, 131, 0.15);
+  }
+  
+  /* Content column */
+  .post-content {
+	order: 1;
+	min-width: 0;
+  }
+  
+  @media screen and (min-width: 900px) {
+	.post-content {
+	  order: 2;
+	}
+  }
+  
+  /* Ensure smooth scrolling for anchor links */
+  html {
+	scroll-behavior: smooth;
+  }
+  
+  /* Respect prefers-reduced-motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+	html {
+	  scroll-behavior: auto;
+	}
+	
+	.table-of-contents a {
+	  transition: none;
+	}
+  }
+  
+  /* Add offset for anchor links so they don't hide behind sticky elements */
+  .post-content h2[id],
+  .post-content h3[id],
+  .post-content h4[id] {
+	scroll-margin-top: 2rem;
+  }
+  
+  /* Mobile: Add border around TOC */
+  @media screen and (max-width: 899px) {
+	.table-of-contents {
+	  border: 2px solid var(--primary);
+	  border-radius: 0.5rem;
+	  padding: 1rem;
+	  background-color: white;
+	  margin-bottom: 2rem;
+	}
+  }
+  
+  /* Ensure all interactive elements have visible focus */
+  .post-content a:focus {
+	outline: 3px solid var(--primary);
+  }
+
+/* End Blog Post Styling */
