@@ -63,6 +63,23 @@ export default function(eleventyConfig) {
     return new Date().getFullYear();
   });
 
+  // Extract headings for table of contents
+  eleventyConfig.addFilter("extractHeadings", function(content) {
+    const headingRegex = /<h([2-4])[^>]*id="([^"]*)"[^>]*>(.*?)<\/h\1>/g;
+    const headings = [];
+    let match;
+    
+    while ((match = headingRegex.exec(content)) !== null) {
+      headings.push({
+        level: parseInt(match[1]),
+        id: match[2],
+        text: match[3].replace(/<[^>]*>/g, '').replace(/&amp;/g, '&')
+      });
+    }
+    
+    return headings;
+  });
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -106,7 +123,8 @@ export default function(eleventyConfig) {
   };
 
   let opts = {
-    permalink: false
+    permalink: false,
+    level: [2, 3, 4] // Generate anchors for h2, h3, h4
   };
 
   eleventyConfig.setLibrary("md", markdownIt(options)

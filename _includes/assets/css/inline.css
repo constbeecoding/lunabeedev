@@ -425,7 +425,7 @@ margin: 0;
 	background-color: rgba(74, 74, 131, 0.1);
   }
   
-  /* Focus indicators - CRITICAL for WCAG AAA */
+  /* Focus indicators */
   .table-of-contents a:focus {
 	outline: 3px solid var(--primary);
   }
@@ -443,10 +443,10 @@ margin: 0;
   .toc-level-4 {
 	padding-left: 2rem;
 	font-size: 0.8rem;
-	color: #333; /* Changed from #666 for better contrast */
+	color: #333; 
   }
   
-  /* Active link indicator (optional enhancement) */
+  /* Active link indicator  */
   .table-of-contents a.active {
 	color: var(--primary);
 	font-weight: 600;
@@ -470,7 +470,7 @@ margin: 0;
 	scroll-behavior: smooth;
   }
   
-  /* Respect prefers-reduced-motion for accessibility */
+  /* A11Y Reduced Motion */
   @media (prefers-reduced-motion: reduce) {
 	html {
 	  scroll-behavior: auto;
@@ -488,7 +488,7 @@ margin: 0;
 	scroll-margin-top: 2rem;
   }
   
-  /* Mobile: Add border around TOC */
+  /* Mobile TOC */
   @media screen and (max-width: 899px) {
 	.table-of-contents {
 	  border: 2px solid var(--primary);
