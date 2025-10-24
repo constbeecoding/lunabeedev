@@ -12,7 +12,7 @@ This is normal text. **This is bold text.** *This is italicized text.*
 
 `This is a code snippet`
 
-[This is a link.](https://womenofjamstack.com/)
+[This is a link.](https://github.com/constbeecoding/lunabeedev "Luna's Github")
 
 # This is a Heading 1
 
