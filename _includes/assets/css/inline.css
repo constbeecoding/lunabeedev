@@ -100,12 +100,15 @@ pre {
 }
 
 /* Header Logo (style as h2) */
-header > em {
-	display: block;
-	font-size: 2em;
-	margin: 0.67em 0;
-	font-weight: bold;
-	font-style: normal;
+header > a picture .logo-img {
+	max-width: 50px;
+	margin-right: 1rem;
+}
+
+header a {
+	display: flex;
+	align-items: center;
+
 }
 
 /* Header Nav */
