@@ -6,7 +6,7 @@ date: 2022-05-05T00:00:00.000Z
 permalink: /work/index.html
 eleventyNavigation:
   key: Work
-  order: 4
+  order: 2
 ---
 
 ## I have some projects I've crafted that I'll add here. As soon as I figure out how this 11ty templating system works...
