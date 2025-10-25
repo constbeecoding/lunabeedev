@@ -3,6 +3,7 @@ import CleanCSS from "clean-css";
 import UglifyJS from "uglify-js";
 import htmlmin from "html-minifier";
 import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
 import markdownItAnchor from "markdown-it-anchor";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
@@ -129,6 +130,7 @@ export default function(eleventyConfig) {
 
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)
+    .use(markdownItAttrs)
   );
 
   return {
