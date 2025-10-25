@@ -5,8 +5,10 @@
 	--black: #040322;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
 }
 
 html {
@@ -17,7 +19,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -37,7 +40,7 @@ body {
 	main {
 		max-width: 90em;
 	}
-  }
+}
 
 p,
 pre,
@@ -52,7 +55,7 @@ a[href] {
 
 a[href]:hover,
 a[href]:visited {
-	color: var(--black)
+	color: var(--black);
 }
 
 a[href]:not(header a) {
@@ -93,14 +96,14 @@ pre {
 	-ms-hyphens: none;
 	hyphens: none;
 	padding: 1em;
-	margin: .5em 0;
+	margin: 0.5em 0;
 }
 
 /* Header Logo (style as h2) */
 header > em {
 	display: block;
 	font-size: 2em;
-	margin: .67em 0;
+	margin: 0.67em 0;
 	font-weight: bold;
 	font-style: normal;
 }
@@ -111,6 +114,14 @@ header {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	background-color: var(--secondary);
+}
+
+@media screen and (min-width: 600px) {
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
 
 header nav ul {
@@ -126,12 +137,12 @@ header nav ul :first-child {
 
 header nav li {
 	display: inline-block;
-	margin: 0 .25em;
+	margin: 0 0.25em;
 }
 
 header nav li a {
-	padding: .25em .5em;
-	border-radius: .25em;
+	padding: 0.25em 0.5em;
+	border-radius: 0.25em;
 }
 
 header nav li a[href]:not(:hover) {
@@ -152,26 +163,26 @@ article {
 
 main > section > article > * {
 	margin-top: 0;
-	margin-bottom: .5em;
+	margin-bottom: 0.5em;
 }
 
 /* Post Tags */
 a[rel="tag"],
 a[rel="tag"]:visited {
 	display: inline-block;
-  vertical-align: text-top;
-  text-transform: uppercase;
-	letter-spacing: .1em;
-  font-size: .625em;
-  padding: 0 .5em;
+	vertical-align: text-top;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 0.625em;
+	padding: 0 0.5em;
 	line-height: 2em;
 	height: 2em;
-  border: 1px solid var(--secondary);
+	border: 1px solid var(--secondary);
 	background-color: var(--secondary);
 	color: var(--primary);
-  border-radius: .25em;
-  text-decoration: none;
-	margin: 0 .5em .5em 0;
+	border-radius: 0.25em;
+	text-decoration: none;
+	margin: 0 0.5em 0.5em 0;
 }
 
 a[rel="tag"]:hover {
@@ -184,26 +195,31 @@ a[rel="tag"]:last-child {
 	margin-right: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: var(--primary);
 }
 
 /* Contact Form */
 form {
-  display: grid;
+	display: grid;
 	padding: 2em 0;
 }
 
 form label {
-  display: none;
+	display: none;
 }
 
 input,
 textarea,
 button {
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
+	width: 100%;
+	padding: 1em;
+	margin-bottom: 1em;
 	font-size: 1rem;
 	font-family: "Avenir", "Avenir Next", sans-serif;
 }
@@ -220,7 +236,7 @@ button {
 	cursor: pointer;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
 	:root {
 		font-size: 1.1rem;
 	}
@@ -239,13 +255,13 @@ button {
 	white-space: nowrap;
 	width: 1px;
 	background-color: #fff;
-	border: 2px solid var(--primary);			
+	border: 2px solid var(--primary);
 	color: #000;
 	letter-spacing: 0.15ch;
 	padding: 1rem 2rem;
 	text-decoration: none;
 	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+}
 
 .skipnav:focus {
 	clip: auto;
@@ -282,20 +298,20 @@ button {
 	justify-content: center;
 	margin-bottom: 0;
 	position: sticky;
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	z-index: 100;
 }
 
 @media screen and (min-width: 600px) {
-.return-to-top-button {
-	height: 6.25rem;
-	width: 6.25rem;
-	border-top-left-radius: 100%;
-	bottom: 0;
-	right: 0;
-	padding: 1rem 0 0 1rem;
-	position: fixed;
-}
+	.return-to-top-button {
+		height: 6.25rem;
+		width: 6.25rem;
+		border-top-left-radius: 100%;
+		bottom: 0;
+		right: 0;
+		padding: 1rem 0 0 1rem;
+		position: fixed;
+	}
 }
 
 .return-to-top-button:hover {
@@ -315,23 +331,23 @@ button {
 }
 
 @media screen and (min-width: 600px) {
-.footer-wrapper {
-	flex-direction: row;
-	align-items: center;
-}
-}
-
-	.footer-wrapper p {
-margin: 0;
+	.footer-wrapper {
+		flex-direction: row;
+		align-items: center;
+	}
 }
 
-.eleventy-logo img{
-	padding: 0 .5rem;
+.footer-wrapper p {
+	margin: 0;
+}
+
+.eleventy-logo img {
+	padding: 0 0.5rem;
 	width: 50px;
 }
 
 .dan-link {
-	padding: 0 .3rem;
+	padding: 0 0.3rem;
 }
 
 /* End of Footer Styling */
@@ -339,58 +355,69 @@ margin: 0;
 /* Blog Post Styling */
 
 /* Two-Column Layout */
- main .blog-post {
+main .blog-post {
 	max-width: 1200px;
 	width: 100%;
-  }
+}
 
-  .post-header {
+.post-header {
 	text-align: center;
 	margin-bottom: 2rem;
 	padding-bottom: 1rem;
 	border-bottom: 2px solid var(--primary);
-  }
-  
-  .post-header h1 {
+}
+
+.post-header h1 {
 	margin-bottom: 0.5rem;
-  }
-  
-  .post-header time {
+}
+
+.post-header time {
 	color: #333; /* Changed from #666 for better contrast */
 	font-size: 0.9rem;
-  }
-  
-  .post-content-wrapper {
+}
+
+.post-content-wrapper {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 2rem;
 	margin-top: 2rem;
-  }
-  
-  @media screen and (min-width: 900px) {
+	grid-template-areas:
+		"toc"
+		"post-content";
+}
+
+@media screen and (min-width: 900px) {
 	.post-content-wrapper {
-	  grid-template-columns: 250px 1fr;
-	  gap: 3rem;
+		grid-template-columns: 250px 1fr;
+		gap: 3rem;
+		grid-template-areas:
+			"toc post-content";
 	}
-  }
-  
-  /* Table of Contents Sidebar */
-  .table-of-contents {
-	order: 2;
-  }
-  
-  @media screen and (min-width: 900px) {
+}
+
+/* Table of Contents Sidebar */
+.table-of-contents {
+	/* order: 2; */
+	grid-area: toc;
+	border: 2px solid var(--primary);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	background-color: white;
+	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 900px) {
 	.table-of-contents {
-	  order: 1;
-	  position: sticky;
-	  top: 2rem;
-	  align-self: start;
-	  max-height: calc(100vh - 4rem);
-	  overflow-y: auto;
+		order: 1;
+		position: sticky;
+		top: 2rem;
+		align-self: start;
+		max-height: calc(100vh - 4rem);
+		overflow-y: auto;
 	}
-  }
-  
-  .toc-title {
+}
+
+.toc-title {
 	font-size: 0.875rem;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -398,19 +425,19 @@ margin: 0;
 	margin-bottom: 1rem;
 	margin-top: 0;
 	color: var(--primary);
-  }
-  
-  .table-of-contents ul {
+}
+
+.table-of-contents ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-  }
-  
-  .table-of-contents li {
+}
+
+.table-of-contents li {
 	margin-bottom: 0.5rem;
-  }
-  
-  .table-of-contents a {
+}
+
+.table-of-contents a {
 	text-decoration: none;
 	color: #040322;
 	font-size: 0.9rem;
@@ -418,90 +445,95 @@ margin: 0;
 	display: block;
 	padding: 0.25rem 0.5rem;
 	border-radius: 0.25rem;
-  }
-  
-  .table-of-contents a:hover {
-	color: var(--primary);
-	background-color: rgba(74, 74, 131, 0.1);
-  }
-  
-  /* Focus indicators */
-  .table-of-contents a:focus {
+}
+
+.table-of-contents a:hover {
+	color: var(--secondary);
+	background-color: var(--primary);
+}
+
+/* Focus indicators */
+.table-of-contents a:focus {
 	outline: 3px solid var(--primary);
-  }
-  
-  /* Indent nested headings */
-  .toc-level-2 {
+}
+
+/* Indent nested headings */
+.toc-level-2 {
 	font-weight: 500;
-  }
-  
-  .toc-level-3 {
+}
+
+.toc-level-3 {
 	padding-left: 1rem;
 	font-size: 0.85rem;
-  }
-  
-  .toc-level-4 {
+}
+
+.toc-level-4 {
 	padding-left: 2rem;
 	font-size: 0.8rem;
-	color: #333; 
-  }
-  
-  /* Active link indicator  */
-  .table-of-contents a.active {
+	color: #333;
+}
+
+/* Active link indicator  */
+.table-of-contents a.active {
 	color: var(--primary);
 	font-weight: 600;
 	background-color: rgba(74, 74, 131, 0.15);
-  }
-  
-  /* Content column */
-  .post-content {
+}
+
+.table-of-contents .blog-index-link {
+	border-top: 2px solid var(--primary);
+}
+
+/* Content column */
+.post-content {
 	order: 1;
 	min-width: 0;
-  }
-  
-  @media screen and (min-width: 900px) {
+	grid-area: post-content;
+}
+
+@media screen and (min-width: 900px) {
 	.post-content {
-	  order: 2;
+		order: 2;
 	}
-  }
-  
-  /* Ensure smooth scrolling for anchor links */
-  html {
+}
+
+/* Ensure smooth scrolling for anchor links */
+html {
 	scroll-behavior: smooth;
-  }
-  
-  /* A11Y Reduced Motion */
-  @media (prefers-reduced-motion: reduce) {
+}
+
+/* A11Y Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
 	html {
-	  scroll-behavior: auto;
+		scroll-behavior: auto;
 	}
-	
+
 	.table-of-contents a {
-	  transition: none;
+		transition: none;
 	}
-  }
-  
-  /* Add offset for anchor links so they don't hide behind sticky elements */
-  .post-content h2[id],
-  .post-content h3[id],
-  .post-content h4[id] {
+}
+
+/* Add offset for anchor links so they don't hide behind sticky elements */
+.post-content h2[id],
+.post-content h3[id],
+.post-content h4[id] {
 	scroll-margin-top: 2rem;
-  }
-  
-  /* Mobile TOC */
-  @media screen and (max-width: 899px) {
+}
+
+/* Mobile TOC */
+/* @media screen and (max-width: 899px) {
 	.table-of-contents {
-	  border: 2px solid var(--primary);
-	  border-radius: 0.5rem;
-	  padding: 1rem;
-	  background-color: white;
-	  margin-bottom: 2rem;
+		border: 2px solid var(--primary);
+		border-radius: 0.5rem;
+		padding: 1rem;
+		background-color: white;
+		margin-bottom: 2rem;
 	}
-  }
-  
-  /* Ensure all interactive elements have visible focus */
-  .post-content a:focus {
+} */
+
+/* Ensure all interactive elements have visible focus */
+.post-content a:focus {
 	outline: 3px solid var(--primary);
-  }
+}
 
 /* End Blog Post Styling */
