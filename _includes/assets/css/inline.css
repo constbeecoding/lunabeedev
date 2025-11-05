@@ -1,7 +1,8 @@
 :root {
 	--primary: #4a4a83;
-	--secondary: white;
+	--darkprimary: #303054;
 	--background: #e6e6fa;
+	--secondary: white;
 	--black: #040322;
 }
 
@@ -124,6 +125,9 @@ header {
 	header {
 		flex-direction: row;
 		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		z-index: 1;
 	}
 }
 
@@ -300,6 +304,7 @@ button {
 	width: 100%;
 	justify-content: center;
 	margin-bottom: 0;
+	padding: .3rem 0;
 	position: sticky;
 	transition: all 0.3s ease-in-out;
 	z-index: 100;
@@ -318,13 +323,18 @@ button {
 }
 
 .return-to-top-button:hover {
-	background-color: #000;
+	background-color: var(--darkprimary);
 	transform: scale(1.1);
 }
 
 .return-to-top-button svg {
 	width: 25px;
+	height: 25px;
 	bottom: -10px;
+}
+
+.return-to-top-button p {
+	margin: 0;
 }
 
 .footer-wrapper {
@@ -400,18 +410,17 @@ main .blog-post {
 
 /* Table of Contents Sidebar */
 .table-of-contents {
-	/* order: 2; */
 	grid-area: toc;
 	border: 2px solid var(--primary);
 	border-radius: 0.5rem;
 	padding: 1rem;
 	background-color: white;
 	margin-bottom: 2rem;
+	scroll-margin-top: 3rem;
 }
 
 @media screen and (min-width: 900px) {
 	.table-of-contents {
-		order: 1;
 		position: sticky;
 		top: 2rem;
 		align-self: start;
@@ -450,7 +459,8 @@ main .blog-post {
 	border-radius: 0.25rem;
 }
 
-.table-of-contents a:hover {
+.table-of-contents a:hover,
+.table-of-contents a:active {
 	color: var(--secondary);
 	background-color: var(--primary);
 }
@@ -484,7 +494,8 @@ main .blog-post {
 }
 
 .table-of-contents .blog-index-link {
-	border-top: 2px solid var(--primary);
+	font-weight: 900;
+	font-size: 1rem;
 }
 
 /* Content column */
@@ -523,16 +534,6 @@ html {
 	scroll-margin-top: 2rem;
 }
 
-/* Mobile TOC */
-/* @media screen and (max-width: 899px) {
-	.table-of-contents {
-		border: 2px solid var(--primary);
-		border-radius: 0.5rem;
-		padding: 1rem;
-		background-color: white;
-		margin-bottom: 2rem;
-	}
-} */
 
 /* Ensure all interactive elements have visible focus */
 .post-content a:focus {
@@ -540,3 +541,11 @@ html {
 }
 
 /* End Blog Post Styling */
+
+
+/* About Page */
+
+.profile-photo {
+	border-radius: 50%;
+}
+/* End of About Page */
