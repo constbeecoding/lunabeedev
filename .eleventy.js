@@ -9,6 +9,7 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import fontAwesomePlugin from "@11ty/font-awesome";
 import bundlePlugin from "@11ty/eleventy-plugin-bundle";
+// import addPairedShortcode from "";
 
 export default function(eleventyConfig) {
 
@@ -20,6 +21,16 @@ export default function(eleventyConfig) {
 
   // Add Bundle Plugin
   eleventyConfig.addPlugin(bundlePlugin);
+
+  // eleventyConfig.addPairedShortcode("wrapperDiv", function (content) {
+	// 	// Method A: ✅ This works fine
+	// 	// return content;
+
+	// 	// Method B: ⚠️ Careful when wrapping with HTML
+	// 	return `<div>${content}</div>`;
+	// });
+
+
 
   // Font Awesome Plugin
   eleventyConfig.addPlugin(fontAwesomePlugin);
