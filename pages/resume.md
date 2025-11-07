@@ -30,7 +30,7 @@ management with content teams, and improving editor workflow for 10+ writers.
 - Led comprehensive accessibility audits across all corporate websites, achieving 100%
 WCAG 2.1 AA compliance and increasing accessible user base.
 
-- Spearheaded complete overhaul of flagship site (registeredagentsinc.com), integrating
+- Spearheaded complete overhaul of flagship site [Registered Agents Inc.](registeredagentsinc.com), integrating
 custom forms from VUE team that increased revenue year-over-year.
 
 - Developed responsive, mobile-first interfaces using modern CSS techniques (Grid, Flexbox)
@@ -44,8 +44,7 @@ within Agile/SCRUM framework.
 - Developed and maintained 40+ client websites using HTML5, CSS3, JavaScript, PHP , and
 WordPress, ensuring cross-browser compatibility and responsive design.
 
-- Built custom image slider feature using Slick Slider and ACF for https://musialawards.com/,
-increasing homepage engagement.
+- Built custom image slider feature using Slick Slider and ACF for [Musial Awards](https://musialawards.com/), increasing homepage engagement.
 
 - Executed comprehensive functional testing on 100+ merge requests using Git/GitHub,
 maintaining code quality standards and preventing production bugs.
