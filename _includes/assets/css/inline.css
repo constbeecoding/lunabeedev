@@ -33,9 +33,9 @@ body {
 	place-items: center;
 }
 
-/* main {
-	max-width: 90em;
-} */
+main {
+	width: 100%;
+}
 
 @media screen and (min-width: 900px) {
 	main {
@@ -370,9 +370,27 @@ footer {
 
 /* End of Footer Styling */
 
+/* About Page */
+
+.about-page-profile {
+	display: flex;
+	align-items: center;
+}
+
+.profile-photo {
+	border-radius: 50%;
+	background-size: cover;
+	shape-outside: circle();  
+}
+
+.about-page-profile picture {
+	margin-right: 1rem;
+}
+
 /* Blog Post Styling */
 
 /* Two-Column Layout */
+
 main .blog-post {
 	max-width: 1200px;
 	width: 100%;
@@ -410,6 +428,15 @@ main .blog-post {
 		gap: 3rem;
 		grid-template-areas: "toc post-content";
 	}
+}
+
+.signature {
+	font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 2rem;
+	margin: 0;
 }
 
 /* Table of Contents Sidebar */
@@ -545,13 +572,6 @@ html {
 
 /* End Blog Post Styling */
 
-/* About Page */
-
-.profile-photo {
-	border-radius: 50%;
-}
-/* End of About Page */
-
 /* Tarot Card Styling */
 .tarot-cards-wrapper {
 	display: flex;
@@ -564,12 +584,12 @@ html {
 .card {
 	width: 200px;
 	height: 340px;
-	/* margin: 1rem auto; */
 	perspective: 1000px;
 	cursor: pointer;
 }
 
 .card-inner {
+	border-radius: .5rem;
 	position: relative;
 	width: 100%;
 	height: 100%;
