@@ -604,7 +604,7 @@ html {
 .post-content h2[id],
 .post-content h3[id],
 .post-content h4[id] {
-	scroll-margin-top: 2rem;
+	scroll-margin-top: 7rem;
 }
 
 /* Ensure all interactive elements have visible focus */
