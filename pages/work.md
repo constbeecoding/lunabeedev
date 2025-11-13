@@ -9,4 +9,3 @@ eleventyNavigation:
   order: 2
 ---
 
-I have some projects I've crafted that I'll add here. As soon as I figure out how this 11ty templating system works...
