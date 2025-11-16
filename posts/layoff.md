@@ -68,7 +68,7 @@ This experience has given me clarity about what truly matters. I'm taking direct
 
 **Immediate Steps:**
 
-- Updated my website (thanks for being here!), portfolio, resume, and LinkedIn
+- Updated my website (thanks for being here!), [portfolio](/work/index.html "Luna's Portfolio"), [resume](/resume/index.html "Luna's Resume"), and [LinkedIn](https://www.linkedin.com/in/lunabee/ "Luna's LinkedIn Profile")
 - Applying strategically to companies aligned with my values
 - Leveraging my network and resources (including Out In Tech)
 - Open to contract work, freelance opportunities, and barista shifts if needed—I've hustled before, I can do it again
@@ -100,3 +100,4 @@ If you're hiring, looking for accessibility expertise, or know someone who is—
 Thank you for reading, and for being part of this journey.
 
 Luna{.signature}
+(written without AI assistance)
