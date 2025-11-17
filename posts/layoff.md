@@ -100,4 +100,3 @@ If you're hiring, looking for accessibility expertise, or know someone who is—
 Thank you for reading, and for being part of this journey.
 
 Luna{.signature}
-(written without AI assistance)
