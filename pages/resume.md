@@ -8,7 +8,7 @@ eleventyNavigation:
   key: Resume/CV
   order: 5
 ---
-## Luna Barber
+## Luna
 
 [LinkedIn](https://www.linkedin.com/in/lunabee/)
 [GitHub](https://github.com/constbeecoding)
