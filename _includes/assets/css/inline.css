@@ -78,7 +78,6 @@ main {
 	padding-bottom: 2em;
 }
 
-main :first-child,
 main > article :first-child {
 	margin-top: 0;
 }
