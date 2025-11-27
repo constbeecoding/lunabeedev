@@ -8,6 +8,7 @@ eleventyNavigation:
   order: 0
 ---
 
-## Welcome!
+## Welcome
 
-This portfolio site is a work in progress and being coded out in the open with the [Eleventy (11ty)](https://www.11ty.dev/) static site generator. It's why the tarot cards are still in development and link nowhere yet. ;){.home-page-intro}
+This portfolio site is a work in progress and being coded out in the open with the [Eleventy (11ty)](https://www.11ty.dev/) static site generator.
+Please visit [my work page](/work/index.html) to see some of the sites I've worked on.
