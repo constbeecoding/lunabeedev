@@ -22,16 +22,6 @@ export default function(eleventyConfig) {
   // Add Bundle Plugin
   eleventyConfig.addPlugin(bundlePlugin);
 
-  // eleventyConfig.addPairedShortcode("wrapperDiv", function (content) {
-	// 	// Method A: ✅ This works fine
-	// 	// return content;
-
-	// 	// Method B: ⚠️ Careful when wrapping with HTML
-	// 	return `<div>${content}</div>`;
-	// });
-
-
-
   // Font Awesome Plugin
   eleventyConfig.addPlugin(fontAwesomePlugin);
 
