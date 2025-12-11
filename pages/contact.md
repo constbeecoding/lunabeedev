@@ -8,6 +8,6 @@ date: 2022-05-05
 permalink: /contact/index.html
 eleventyNavigation:
   key: Contact
-  order: 3
+  order: 6
 ---
-Reach out if you'd like to schedule a chat remotely to talk about my work.
+Reach out if you'd like to schedule a chat remotely to talk about my work, or if you need to report a bug or accessibility issue.
