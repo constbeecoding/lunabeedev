@@ -361,7 +361,7 @@ button {
 	border: none;
 	bottom: 0;
 	cursor: pointer;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	height: 4rem;
 	width: 100%;
